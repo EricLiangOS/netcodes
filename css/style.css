@@ -18,6 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   overflow-x: hidden;
+  padding-inline: 0.5rem;
 }
 
 /* Heading Fonts Size */
