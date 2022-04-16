@@ -1,0 +1,422 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>How to Maintain Clean Code</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- ThemeFisher Icon -->
+    <link rel="stylesheet" href="plugins/themefisher-fonts/themefisher-fonts.css">
+    <!-- Light Box -->
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="plugins/animate/animate.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+
+
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map_canvas {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+    </style>
+    <script src="plugins/modernizr.min.js"></script>
+    <script src="https://kit.fontawesome.com/69bf6539f4.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <!-- Loader to display before content Load-->
+  <div class="loading">
+
+    <!-- <img src="img/loader.gif" alt=""> -->
+
+    <div class="windows8 loading-position">
+      <div class="wBall" id="wBall_1">
+        <div class="wInnerBall"></div>
+      </div>
+      <div class="wBall" id="wBall_2">
+        <div class="wInnerBall"></div>
+      </div>
+      <div class="wBall" id="wBall_3">
+        <div class="wInnerBall"></div>
+      </div>
+      <div class="wBall" id="wBall_4">
+        <div class="wInnerBall"></div>
+      </div>
+      <div class="wBall" id="wBall_5">
+        <div class="wInnerBall"></div>
+      </div>
+    </div>
+  </div> 
+
+
+<section class="page-header services-header" data-parallax="scroll" data-image-src="images/header/articles-folding-img.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Articles</h1>
+        <h2>Of the students, by the students, for the students</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Navigation -section
+  =========================-->
+  <nav class="navbar navbar-fixed-top navigation" >
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logo" href="index.html">
+          <img src="images/netcodes_logo.png" alt="" style="width: clamp(3rem, 30vw, 22rem);">
+        </a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="webinars.html">Webinars</a></li>
+          <li><a href="hackathons.html">Hackathons</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="apply.html">Apply</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+  
+  <!-- Blog Sections 
+  =========================-->
+  <section class="article-single"  id="ArticleTop">
+  	<div class="container">
+  		<div class="row">
+        <div class="title text-center">
+          <h2>Our Articles</h2>
+        </div>
+  			<div class="col-md-9">
+				  <!-- Blog Left Sections 
+				  =========================-->
+            <!-- Single Blog Page Main Img
+            ============================== -->
+            <div class="article-single-section-img">
+              <img src="images/articles/articles1-thumbnail.webp" alt="">
+            </div>
+            <!-- Single Blog Page Main Content
+            ================================== -->
+            <div class="article-single-content">
+              <div class="article-content-description">
+                <h3><a class="article-content-title" href="#">How to Maintain Clean Code</a></h3>
+                <div class="meta">
+                  <div class="date">
+                    <p>February 26<sup>th</sup> 2022</p>
+                </div>
+                  <div class="author">
+                    <p>By Eric Liang</p>
+                  </div>
+                </div>
+                <p class="article-description">One of the biggest nuisances of programming doesn’t come from actually coding, but rather maintaining your code. Something as small as letting your code go messy can have lots of consequences such as making it difficult to understand, difficult to add onto the code, and even result in errors. Thus, if you ask any experienced programmer, they’ll tell you the importance of learning how to maintain code.</p>
+              </div>
+              <div class="article-content-description">
+                <h4 class="article-inner-heading">Tips for Tidying Code</h4>
+
+                <p class="article-description">Regardless of whether you are in desperate need of fixing your messy code or just want a quick refresher on how to improve your programs, there are a few ways to prune over previous code to make it look better.</p>
+
+                <p class="article-description">First of all, it’s very important to use representative and descriptive variable names. This helps ensure that people can understand what’s happening in the code, even if you don’t include any documentation. Ideally, the variable names should be understandable to somebody who is reading the code for the first time without knowledge of what the code does, a general trend that occurs for most programming practices. As a result, it’s not a good idea to use abbreviations in your code:</p>
+
+                <p class="article-description"><pre>n = a + b</pre></p>
+
+                <p class="article-description">What does a + b mean? Apples + bananas? Abbie + Ben? It makes much more sense to actually describe what the variables represent. Generally, don’t worry too much about the length of the variable as long as it isn’t redundant and adequately describes the code.</p>
+
+                <div class="article-content-img">
+                    <img src="images/articles/articles1-img1.png" alt="">
+                </div>
+
+                <p class="article-description">Documentation is another important part of code since it explains what the code does; this helps any future programmers and potentially a future you whenever you’re reading back your code. Documentation can be kept in comments and should generally be used to describe what the code does in broad strokes. It would be redundant to use a comment for each tiny detail in the code, as shown below:</p>
+
+                <p class="article-description"><pre>print(x + y) #Finds the sum of x + y and prints it out</pre></p>
+
+                <p class="article-description">This is a bit of an exaggeration but this type of documentation is clearly still quite silly. In general, it’s recommended to use documentation to explain larger things that someone might have difficulty understanding, such as algorithms or functions. It’s also important to keep the documentation simple and concise, as shown below:</p>
+
+                <p class="article-description"><pre>
+# Dijkstra’s algorithm by repeatedly finding the nearest unvisited node
+def dijkstra(self, src):
+
+    dist = [1e7] * self.V
+    dist[src] = 0
+    sptSet = [False] * self.V
+
+    for cout in range(self.V):
+
+        # Pick the minimum distance vertex from
+        # the set of vertices not yet processed.
+        u = self.minDistance(dist, sptSet)
+
+        sptSet[u] = True
+
+        # Update dist value of the adjacent vertices
+        for v in range(self.V):
+            if (self.graph[u][v] > 0 and
+                sptSet[v] == False and
+                dist[v] > dist[u] + self.graph[u][v]):
+                dist[v] = dist[u] + self.graph[u][v]
+
+    self.printSolution(dist)
+</pre></p>
+
+            <p class="article-description">Lastly, a good programming practice is to limit the functions to a single task to execute and name it accordingly, rather than doing multiple things at once. This makes the code much more understandable and also easier to use. For instance, if the function findSquare() returns the area, coordinates, and side length, then the function is quite confusing for other programmers. As a result, it’s much better to split the function into findSquareArea(), findSquareLength(), and findSquareCoordinates(), eliminating the confusion.</p>
+            </div>
+            
+            
+            <div class="article-content-description">
+                <h4 class="article-inner-heading">Good Programming Practices</h4>
+                <p class="article-description">The things above make your code far more readable and functional, but there are also other tips that can greatly improve the quality of someone’s code. Otherwise, your code may be considered “spaghetti code,” which stands for messy and unstructured code.</p>
+
+                <div class="article-content-img">
+                    <img src="images/articles/articles1-img2.jpg" alt="">
+                </div>
+
+                <p class="article-description">Code is often condensed and stretched hundreds if not thousands of lines, so it’s important to partition your code into sections that are logically consistent. For example, if you should probably have a line break between getting input and processing the input, since it makes much more sense that they’re separate actions. However, it’s also important to use line breaks inside each section to make the code even more readable, such as separating for loops and declaring variables.</p>
+
+                <p class="article-description">There are also other common code practices such as naming conventions for variables. For instance, camel case separates words in variables by uppercasing them and snake case uses an underscore. Another heated debate is whether you use tabs or spaces to indent your code. Generally, there are pros and cons for both sides of these arguments, so it ultimately depends on personal preference. However, it’s quite important to have consistency throughout the entire code to make it visually pleasing and less confusing.</p>
+            </div>
+
+            <div class="article-content-description">
+                <h4 class="article-inner-heading">Clean Code and its Benefits</h4>
+                
+                <div class="article-content-img">
+                    <img src="images/articles/articles1-img3.jpg" alt="">
+                </div>
+
+                <p class="article-description">As mentioned above, clean and consistent code is incredibly important because it essentially makes the code much easier to read. Since code often goes for long periods of time before being updated, clean code ensures that the next person to change the code, whether a different programmer or yourself, won’t have difficulty deciphering the code, helping save lots of time.</p>
+
+                <p class="article-description">Clean code also reduces the amount of errors since it helps straighten out your thoughts so you know exactly what it does. Any misunderstanding errors that might arise from bad code won’t happen, which can reduce the amount of errors.</p>
+
+                <p class="article-description">Through these tips, you can also write clean code. Just remember, no matter how much you enjoy Italian food, don’t get tempted by the spaghetti code!</p>
+            </div>
+
+
+            </div><!-- End Single Blog Content -->
+            <!-- Single Blog Page Comments
+            ================================== -->
+            <div class="article-single-comments">
+                <h4 class="comments-title">Comments (1)</h4>
+                <div class="article-comments">
+                  <div class="media">
+                    <div class="media-left article-left-img">
+                      <div class="article-comments-img">
+                        <img class="media-object" src="images/articles/comment-anonymous1.png" alt="comments pic">
+                      </div>
+                    </div>
+                    <div class="media-body comments-body">
+                      <p class="article-comments-text">“ Really great read and good tips. However, the real question is, are you a camelCase user or a snake_case user?</p>
+                      <h4 class="media-heading comments-author">Pedro Wayne</h4>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Single Blog Page Form
+            
+            <div class="article-single-form">
+              <form>
+                <div class="form-group col-md-6 padding-0">
+                  <input type="text" class="form-control article-form-input" placeholder="Your Name">
+                </div>
+                <div class="form-group col-md-6 padding-0 padding-left-15">
+                  <input type="email" class="form-control article-form-input" placeholder="Your Email">
+                </div>
+                <div class="form-group col-md-12 padding-0">
+                  <textarea class="form-control article-form-textarea" placeholder="Your Comment"></textarea>
+                </div>
+                <div class="col-md-12 padding-0">
+                  <div class="form-submit-btn text-center">
+                    <button type="submit" class="btn btn-default btn-main th-btn">Submit Comment</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            ================================== -->
+          <!-- See All Post -->
+          <div class="col-md-12">
+            <div class="see-all-post text-center">
+              <a class="btn btn-default th-btn solid-btn" href="articles.html#Articles" role="button"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back To All Posts </a>
+            </div>
+          </div>
+  			</div>
+  			<div class="col-md-3">
+				  <!-- Blog Right Sections 
+				  =========================-->
+    <div class="article-sidbar">
+
+      <div class="categories widgets">
+        <div class="list-group text-center">
+          <div class="list-group-item active"> Article Filters </div>
+          <a href="articles.html#Articles" class="list-group-item">All</a>
+          <a href="articles.html#Articles" class="list-group-item">Blogs</a>
+          <a href="articles.html#Articles" class="list-group-item">Guides</a>
+          <a href="articles.html#Articles" class="list-group-item">Algorithms</a>
+          <a href="articles.html#Articles" class="list-group-item">Competitions</a>
+          <a href="articles.html#Articles" class="list-group-item">Web Development</a>
+
+
+        </div>
+      </div>
+      <div class="related-post widgets">
+        <div class="list-group">
+          <div class="list-group-item active text-center">
+          Top Posts
+          </div>
+          <a href="articles5.html#ArticleTop" class="list-group-item">
+            <div class="media">
+              <div class="media-left media-middle"><p class="post-count">1</p></div>
+              <div class="media-body">
+                <p>Tips on Getting Computer Science Internships</p>
+              </div>
+            </div>
+          </a>
+          <a href="articles3.html#ArticleTop" class="list-group-item">
+            <div class="media">
+              <div class="media-left media-middle"><p class="post-count">2</p></div>
+              <div class="media-body">
+                <p>My Review of Github Copilot (I don't think it's going to take your job…yet)</p>
+              </div>
+            </div>
+          </a>
+          <a href="articles4.html#ArticleTop" class="list-group-item">
+            <div class="media">
+              <div class="media-left media-middle"><p class="post-count">3</p></div>
+              <div class="media-body">
+                <p>An Introduction to Graphs and the Depth First Search Algorithm</p>
+              </div>
+            </div>
+          </a>
+          <a href="articles2.html#ArticleTop" class="list-group-item">
+            <div class="media">
+              <div class="media-left media-middle"><p class="post-count">4</p></div>
+              <div class="media-body">
+                <p>How to Prepare for Competitive Programming (USACO)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+	    </div>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+  
+
+
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="col-md-4">
+                        <!-- footer About section
+                        ========================== -->
+                        <div class="footer-about">
+                            <h3 class="footer-title">About</h3>
+                            <p>netcodes is a nonprofit organization dedicated to providing students with opportunities to excel at computer science. Join us in our hackathons and webinars!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- footer Address section
+                        ========================== -->
+                        <div class="footer-address">
+                            <h3 class="footer-title">Address</h3>
+                            <p>Based in San Jose, California</p>
+                            <p class="contact-address">
+                                Contact us : <a href="tel:+4085409388">(408) 540-9388 </a> <br>
+                                Email us : <a href="mailto:netcodesorg@gmail.com" target="_blank">netcodesorg@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- footer Media link section
+                        ========================== -->
+                        <div class="footer-social-media">
+                            <h3 class="footer-title">Keep in touch</h3>
+                            <ul class="footer-media-link">
+                                <li><a href="https://www.linkedin.com/company/netcodes1/about/" target="_blank"><i class="tf-ion-social-linkedin-outline"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="mailto:netcodesorg@gmail.com" target="_blank"><i class="tf-ion-social-google-outline" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://www.instagram.com/netcodesorg/" target="_blank"><i class="tf-ion-social-instagram-outline"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://discord.gg/tFBJgPYyVP" target="_blank"><i class="fa-brands fa-discord"
+                                  aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-nav text-center">
+                    <div class="col-md-12">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="webinars.html">Webinars</a></li>
+                            <li><a href="hackathons.html">Hackathons</a></li>
+                            <li><a href="articles.html">Articles</a></li>
+                            <li><a href="about-us.html">Apply</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            <p>&copy; 2022 All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="plugins/jquery.min.js"></script>
+
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <!-- filter -->
+    <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+    <!-- Lightbox -->
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Parallax -->
+    <script src="plugins/parallax.min.js"></script>
+    <!-- Video -->
+    <script src="plugins/jquery.vide.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+    <script src="plugins/google-map/gmap.js"></script>
+
+    <script src="js/script.js"></script>
+    </body>
+
+    </html>

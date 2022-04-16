@@ -1,0 +1,432 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>An Introduction to Graphs and the Depth First Search Algorithm</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- ThemeFisher Icon -->
+    <link rel="stylesheet" href="plugins/themefisher-fonts/themefisher-fonts.css">
+    <!-- Light Box -->
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="plugins/animate/animate.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+
+
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map_canvas {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+    </style>
+    <script src="plugins/modernizr.min.js"></script>
+    <script src="https://kit.fontawesome.com/69bf6539f4.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <!-- Loader to display before content Load-->
+  <div class="loading">
+
+    <!-- <img src="img/loader.gif" alt=""> -->
+
+    <div class="windows8 loading-position">
+      <div class="wBall" id="wBall_1">
+        <div class="wInnerBall"></div>
+      </div>
+      <div class="wBall" id="wBall_2">
+        <div class="wInnerBall"></div>
+      </div>
+      <div class="wBall" id="wBall_3">
+        <div class="wInnerBall"></div>
+      </div>
+      <div class="wBall" id="wBall_4">
+        <div class="wInnerBall"></div>
+      </div>
+      <div class="wBall" id="wBall_5">
+        <div class="wInnerBall"></div>
+      </div>
+    </div>
+  </div> 
+
+
+<section class="page-header services-header" data-parallax="scroll" data-image-src="images/header/articles-folding-img.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Articles</h1>
+        <h2>Of the students, by the students, for the students</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Navigation -section
+  =========================-->
+  <nav class="navbar navbar-fixed-top navigation" >
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logo" href="index.html">
+          <img src="images/netcodes_logo.png" alt="" style="width: clamp(3rem, 30vw, 22rem);">
+        </a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="webinars.html">Webinars</a></li>
+          <li><a href="hackathons.html">Hackathons</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="apply.html">Apply</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+  
+  <!-- Blog Sections 
+  =========================-->
+  <section class="article-single"  id="ArticleTop">
+  	<div class="container">
+  		<div class="row">
+        <div class="title text-center">
+          <h2>Our Articles</h2>
+        </div>
+  			<div class="col-md-9">
+				  <!-- Blog Left Sections 
+				  =========================-->
+            <!-- Single Blog Page Main Img
+            ============================== -->
+            <div class="article-single-section-img">
+              <img src="images/articles/articles4-thumbnail.png" alt="" style="padding-inline: clamp(1rem, 12vw, 15rem);">
+            </div>
+            <!-- Single Blog Page Main Content
+            ================================== -->
+            <div class="article-single-content">
+              <div class="article-content-description">
+                <h3><a class="article-content-title" href="#">An Introduction to Graphs and the Depth First Search Algorithm</a></h3>
+                <div class="meta">
+                  <div class="date">
+                    <p>April 5<sup>th</sup> 2022</p>
+                </div>
+                  <div class="author">
+                    <p>By Pedro Wayne</p>
+                  </div>
+                </div>
+                <p class="article-description">Trees and graphs are a core part of computer science because they allow us to visualize and store relationships between different objects. Of course, it’s also important to utilize these trees and data structures by finding out information about it, which is why there is a whole field of computer science related to graph algorithms. One of the most important graph algorithms is the depth first search (DFS).</p>
+              </div>
+              <div class="article-content-description">
+                <h4 class="article-inner-heading">Prerequisite Knowledge for DFS</h4>
+
+                <p class="article-description">As mentioned above, DFS is used on graphs and trees, which are data structures in computer science and come from mathematical graph theory. When you think of a graph, you probably think of the coordinates from math, where you can store coordinate points of different values that can represent different things. The points of these graphs also have distances between them that you can calculate, allowing you to plot street maps and other useful things.</p>
+
+                <div class="article-content-img">
+                    <img src="images/articles/articles4-img1.webp" alt="">
+                </div>
+
+                <p class="article-description">The storing of values is quite important in computer science for algorithms like traffic, but all the unused space in the graph is very inefficient and wastes memory, so graphs are optimized to only keep track of the direct connections between locations.  Trees are just a special type of graph that doesn't have any cycles.</p>
+
+                <p class="article-description">The points of these graphs are normally called nodes or vertices, and these connections are called edges.</p>
+                
+                <div class="article-content-img">
+                    <img src="images/articles/articles4-img2.jpeg" alt="">
+                </div>
+
+                <p class="article-description">This brings up the question: How do you efficiently navigate across these graphs, whether for updating them or calculating a value?</p>
+
+                <p class="article-description">This is where DFS comes in. The depth first search is one of the most optimized algorithms to traverse a graph, and it does so by continually going through unvisited edges and marking them as visited, until the algorithm terminates or has no more nodes to visit.</p>
+            </div>
+            
+            
+            <div class="article-content-description">
+                <h4 class="article-inner-heading">How DFS Works</h4>
+                <p class="article-description">I won’t be showing the actual code for the DFS since there’s a lot of different programming languages, but the basic idea is the same and can be implemented in any language once you understand it.</p>
+
+                <p class="article-description">Here is the basic idea for the DFS:</p>
+
+                <ol class="article-description">
+                    <li>Visit a unvisited vertex s</li>
+                    <li>Mark s as visited</li>
+                    <li>Recursively visit each unvisited vertex attached to s</li>
+                </ol></p>
+
+                <p class="article-description">It looks easy right? That’s because the basic idea is incredibly easy to follow and you’ve probably done a similar algorithm when trying to brute force something.  As you can see in the graph below, the algorithm tries to go further into the graph until it runs out of spaces to go; afterwards, it backtracks to the previous node and tries to go to other nodes. This process repeats until the entire graph is traversed.</p>
+                
+                <div class="article-content-img">
+                    <img src="images/articles/articles4-img3.gif" alt=""  style="padding-inline: clamp(1rem, 9vw, 6rem);">
+                </div>
+
+                <p class="article-description">The pseudocode is shown below for a more concrete implementation of the DFS algorithm:</p>
+
+                <p class="article-description"><pre>
+dfs(node):
+visited[node] = true
+
+/* do something with node */
+
+for each neighbor connected to node:
+    if neighbor not visited:
+        dfs(adjNode)
+                </pre></p>
+                
+                <p class="article-description">Through this algorithm, you can now visit all the nodes connected to the original node and do something with them, such as adding them up. One reason this works so seamlessly is because the recursive function call executes in the middle of the function, meaning you explore the next node first before going back.</p>
+                
+                <p class="article-description">Below is also a Python implementation:</p>
+                <p class="article-description"><pre>
+# Using a Python dictionary to act as an adjacency list
+graph = {
+    'A' : ['B','C'],
+    'B' : ['D', 'E'],
+    'C' : ['F'],
+    'D' : [],
+    'E' : ['F'],
+    'F' : []
+}
+
+visited = set() # Set to keep track of visited nodes.
+
+def dfs(visited, graph, node):
+    if node not in visited:
+        print (node)
+        visited.add(node)
+        for neighbor in graph[node]:
+            dfs(visited, graph, neighbor)
+
+# Driver Code, prints all nodes
+dfs(visited, graph, 'A')
+
+                </pre></p>
+            </div>
+
+            <div class="article-content-description">
+                <h4 class="article-inner-heading">Applications of DFS</h4>
+                
+                <p class="article-description">Now that you know what the DFS is, what’s its purpose? </p>
+
+                <p class="article-description">As mentioned above, one of the main uses of DFS is it allows for easy graph navigation to reach all the nodes, which is useful if you want to calculate something with all vertices, such as increasing its values (Although it’s possible to also do this without DFS).</p>
+
+                <p class="article-description">Since the DFS goes through the graph with a distinct path each time, the DFS’s path also has a bunch of useful applications. For instance, DFS’ brute force approach is a good way to solve mazes since it will reach all the reachable cells, including the goal. Similarly, it can be used to solve even non-graph problems like Sudoku, with a bit of modification.</p>
+                
+                <div class="article-content-img">
+                    <img src="images/articles/articles4-img4.gif" alt=""  style="padding-inline: clamp(1rem, 10vw, 8rem);">
+                </div>                
+
+                <p class="article-description">Finally, DFS has applications within computer science itself, acting as a building block for more difficult use cases. For instance, the algorithm is able to detect cycles or connected components within the graph because of its brute-force nature, and it can also be used for things such as topological sorting.</p>
+                
+                <p class="article-description">Ultimately, DFS is a simple yet highly useful algorithm that is incredibly prevalent in computer science. Through trial and error, DFS is able to solve many useful problems, and its modular nature allows for many modifications to solve even more problems. I highly recommend you try to implement it yourself in your preferred language to better understand the algorithm and its use cases.</p>
+            </div>
+
+
+            </div><!-- End Single Blog Content -->
+            <!-- Single Blog Page Comments
+            ================================== -->
+            <div class="article-single-comments">
+                <h4 class="comments-title">Comments (0)</h4>
+            </div>
+
+            <!-- Single Blog Page Form
+            
+            <div class="article-single-form">
+              <form>
+                <div class="form-group col-md-6 padding-0">
+                  <input type="text" class="form-control article-form-input" placeholder="Your Name">
+                </div>
+                <div class="form-group col-md-6 padding-0 padding-left-15">
+                  <input type="email" class="form-control article-form-input" placeholder="Your Email">
+                </div>
+                <div class="form-group col-md-12 padding-0">
+                  <textarea class="form-control article-form-textarea" placeholder="Your Comment"></textarea>
+                </div>
+                <div class="col-md-12 padding-0">
+                  <div class="form-submit-btn text-center">
+                    <button type="submit" class="btn btn-default btn-main th-btn">Submit Comment</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            ================================== -->
+          <!-- See All Post -->
+          <div class="col-md-12">
+            <div class="see-all-post text-center">
+              <a class="btn btn-default th-btn solid-btn" href="articles.html#Articles" role="button"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back To All Posts </a>
+            </div>
+          </div>
+  			</div>
+  			<div class="col-md-3">
+				  <!-- Blog Right Sections 
+				  =========================-->
+    <div class="article-sidbar">
+
+      <div class="categories widgets">
+        <div class="list-group text-center">
+          <div class="list-group-item active"> Article Filters </div>
+          <a href="articles.html#Articles" class="list-group-item">All</a>
+          <a href="articles.html#Articles" class="list-group-item">Blogs</a>
+          <a href="articles.html#Articles" class="list-group-item">Guides</a>
+          <a href="articles.html#Articles" class="list-group-item">Algorithms</a>
+          <a href="articles.html#Articles" class="list-group-item">Competitions</a>
+          <a href="articles.html#Articles" class="list-group-item">Web Development</a>
+
+
+        </div>
+      </div>
+      <div class="related-post widgets">
+        <div class="list-group">
+          <div class="list-group-item active text-center">
+          Top Posts
+          </div>
+          <a href="articles5.html#ArticleTop" class="list-group-item">
+            <div class="media">
+              <div class="media-left media-middle"><p class="post-count">1</p></div>
+              <div class="media-body">
+                <p>Tips on Getting Computer Science Internships</p>
+              </div>
+            </div>
+          </a>
+          <a href="articles3.html#ArticleTop" class="list-group-item">
+            <div class="media">
+              <div class="media-left media-middle"><p class="post-count">2</p></div>
+              <div class="media-body">
+                <p>My Review of Github Copilot (I don't think it's going to take your job…yet)</p>
+              </div>
+            </div>
+          </a>
+          <a href="articles4.html#ArticleTop" class="list-group-item">
+            <div class="media">
+              <div class="media-left media-middle"><p class="post-count">3</p></div>
+              <div class="media-body">
+                <p>An Introduction to Graphs and the Depth First Search Algorithm</p>
+              </div>
+            </div>
+          </a>
+          <a href="articles2.html#ArticleTop" class="list-group-item">
+            <div class="media">
+              <div class="media-left media-middle"><p class="post-count">4</p></div>
+              <div class="media-body">
+                <p>How to Prepare for Competitive Programming (USACO)</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+	    </div>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+  
+
+
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="col-md-4">
+                        <!-- footer About section
+                        ========================== -->
+                        <div class="footer-about">
+                            <h3 class="footer-title">About</h3>
+                            <p>netcodes is a nonprofit organization dedicated to providing students with opportunities to excel at computer science. Join us in our hackathons and webinars!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- footer Address section
+                        ========================== -->
+                        <div class="footer-address">
+                            <h3 class="footer-title">Address</h3>
+                            <p>Based in San Jose, California</p>
+                            <p class="contact-address">
+                                Contact us : <a href="tel:+4085409388">(408) 540-9388 </a> <br>
+                                Email us : <a href="mailto:netcodesorg@gmail.com" target="_blank">netcodesorg@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- footer Media link section
+                        ========================== -->
+                        <div class="footer-social-media">
+                            <h3 class="footer-title">Keep in touch</h3>
+                            <ul class="footer-media-link">
+                                <li><a href="https://www.linkedin.com/company/netcodes1/about/" target="_blank"><i class="tf-ion-social-linkedin-outline"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="mailto:netcodesorg@gmail.com" target="_blank"><i class="tf-ion-social-google-outline" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://www.instagram.com/netcodesorg/" target="_blank"><i class="tf-ion-social-instagram-outline"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://discord.gg/tFBJgPYyVP" target="_blank"><i class="fa-brands fa-discord"
+                                  aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-nav text-center">
+                    <div class="col-md-12">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="webinars.html">Webinars</a></li>
+                            <li><a href="hackathons.html">Hackathons</a></li>
+                            <li><a href="articles.html">Articles</a></li>
+                            <li><a href="about-us.html">Apply</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            <p>&copy; 2022 All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="plugins/jquery.min.js"></script>
+
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <!-- filter -->
+    <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+    <!-- Lightbox -->
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Parallax -->
+    <script src="plugins/parallax.min.js"></script>
+    <!-- Video -->
+    <script src="plugins/jquery.vide.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+    <script src="plugins/google-map/gmap.js"></script>
+
+    <script src="js/script.js"></script>
+    </body>
+
+    </html>
