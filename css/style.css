@@ -1393,7 +1393,7 @@ hr.hr-border {
 }
 
 .mission-statement {
-  padding: 65px 0;
+  padding-inline: clamp(0rem, 4vw, 4rem);
 }
 
 .slider-main {
@@ -1414,7 +1414,8 @@ hr.hr-border {
 
 .mission-statement-description-area {
   position: relative;
-  padding: 90px 75px;
+  padding-block: 75px;
+  padding-inline: clamp(0rem, 7vw, 5.5rem);
   text-align: center;
 }
 
@@ -2811,7 +2812,6 @@ details[open] .control-icon-expand {
   background: #FFF;
   cursor: pointer;
 }
-
 
 
 .crop-img-display {
