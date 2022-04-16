@@ -1397,6 +1397,10 @@ hr.hr-border {
   padding-inline: clamp(0rem, 4vw, 4rem);
 }
 
+.mission-statement-inside{
+  margin-block: 7rem;
+}
+
 .slider-main {
   background: rgba(0, 0, 0, 0.8);
 }
@@ -1418,6 +1422,7 @@ hr.hr-border {
   padding-block: 75px;
   padding-inline: clamp(0rem, 4vw, 5.5rem);
   text-align: center;
+  
 }
 
 .mission-statement-description-area .mission-statement-description {
