@@ -1415,7 +1415,7 @@ hr.hr-border {
 .mission-statement-description-area {
   position: relative;
   padding-block: 75px;
-  padding-inline: clamp(0rem, 7vw, 5.5rem);
+  padding-inline: clamp(0rem, 4vw, 5.5rem);
   text-align: center;
 }
 
@@ -2812,6 +2812,7 @@ details[open] .control-icon-expand {
   background: #FFF;
   cursor: pointer;
 }
+
 
 
 .crop-img-display {
